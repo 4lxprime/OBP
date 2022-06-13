@@ -20,15 +20,6 @@ logo = """
  ` 8888     ,88'   8 8888    ,88' 8 8888
     `8888888P'     8 888888888P   8 8888
 """
-menu = """
-            ╔════════════════╗ 
-            |   1) text 1    |
-            ╠════════════════╣ 
-            |   2) text 2    |
-            ╠════════════════╣ 
-            |   3) text 3    |
-            ╚════════════════╝
-"""
 # [-] var
 
 # [+] main code
@@ -37,7 +28,7 @@ class OBP():
         self.main()
     
     def main(self):
-        cmd = input (f"{cw}automatic ou manuel (a/m)> ")
+        cmd = input (f"{cw}automatique ou manuel (a/m)> ")
         if cmd == 'a':
             gen_lvl = input(f"{cw}nombre d'identités remarquables dans une meme operation (1->6)> ")
             try: int(gen_lvl)
@@ -49,11 +40,11 @@ class OBP():
                     try:
                         if bool(random.getrandbits(1)):
                             if bool(random.getrandbits(1)):
-                                print(f' > {self.idr2()}')
+                                print(f' > {self.idr2(etat = False)}')
                             else:
-                                print(f' > {self.idr1()}')
+                                print(f' > {self.idr1(etat = False)}')
                         else: 
-                            print(f' > {self.idr3()}')
+                            print(f' > {self.idr3(etat = False)}')
                     except: print(f'{cr}[!] erreur 1 !{cw}')
                     
                 elif int(gen_lvl) == 2:
@@ -62,12 +53,12 @@ class OBP():
                         for i in range(2):
                             if bool(random.getrandbits(1)):
                                 if bool(random.getrandbits(1)):
-                                    result_i.append(self.idr2())
+                                    result_i.append(self.idr2(etat = False))
                                 else:
-                                    result_i.append(self.idr3())
+                                    result_i.append(self.idr3(etat = False))
                             else: 
-                                result_i.append(self.idr1())
-                        calc = f'{result_i[0]}*{result_i[1]}'
+                                result_i.append(self.idr1(etat = False))
+                        calc = f'({result_i[0]})*({result_i[1]})'
                         print(f' > {calc}')
                     except: print(f'{cr}[!] erreur 2 !{cw}')
                     
@@ -77,14 +68,14 @@ class OBP():
                         for i in range(3):
                             if bool(random.getrandbits(1)):
                                 if bool(random.getrandbits(1)):
-                                    result_i.append(self.idr2())
+                                    result_i.append(self.idr2(etat = False))
                                 else:
-                                    result_i.append(self.idr1())
+                                    result_i.append(self.idr1(etat = False))
                             else: 
-                                result_i.append(self.idr3())
+                                result_i.append(self.idr3(etat = False))
                         if bool(random.getrandbits(1)): symbole = '+'
                         else: symbole = '-'
-                        calc = f'{result_i[0]}*{result_i[1]}{symbole}{result_i[2]}'
+                        calc = f'({result_i[0]})*({result_i[1]}){symbole}({result_i[2]})'
                         print(f' > {calc}')
                     except: print(f'{cr}[!] erreur 3 !{cw}')
                 
@@ -94,14 +85,14 @@ class OBP():
                         for i in range(4):
                             if bool(random.getrandbits(1)):
                                 if bool(random.getrandbits(1)):
-                                    result_i.append(self.idr2())
+                                    result_i.append(self.idr2(etat = False))
                                 else:
-                                    result_i.append(self.idr1())
+                                    result_i.append(self.idr1(etat = False))
                             else: 
-                                result_i.append(self.idr3())
+                                result_i.append(self.idr3(etat = False))
                         if bool(random.getrandbits(1)): symbole = '+'
                         else: symbole = '-'
-                        calc = f'{result_i[0]}*{result_i[1]}{symbole}{result_i[2]}*{result_i[3]}'
+                        calc = f'({result_i[0]})*({result_i[1]}){symbole}({result_i[2]})*({result_i[3]})'
                         print(f' > {calc}')
                     except: print(f'{cr}[!] erreur 4 !{cw}')
                 
@@ -111,16 +102,16 @@ class OBP():
                         for i in range(5):
                             if bool(random.getrandbits(1)):
                                 if bool(random.getrandbits(1)):
-                                    result_i.append(self.idr2())
+                                    result_i.append(self.idr2(etat = False))
                                 else:
-                                    result_i.append(self.idr1())
+                                    result_i.append(self.idr1(etat = False))
                             else: 
-                                result_i.append(self.idr3())
+                                result_i.append(self.idr3(etat = False))
                         if bool(random.getrandbits(1)): symbole = '+'
                         else: symbole = '-'
                         if bool(random.getrandbits(1)): symbole_2 = '+'
                         else: symbole_2 = '-'
-                        calc = f'{result_i[0]}*{result_i[1]}{symbole}{result_i[2]}*{result_i[3]}{symbole_2}{result_i[4]}'
+                        calc = f'({result_i[0]})*({result_i[1]}){symbole}({result_i[2]})*({result_i[3]}){symbole_2}({result_i[4]})'
                         print(f' > {calc}')
                     except: print(f'{cr}[!] erreur 5 !{cw}')
                 
@@ -130,16 +121,16 @@ class OBP():
                         for i in range(6):
                             if bool(random.getrandbits(1)):
                                 if bool(random.getrandbits(1)):
-                                    result_i.append(self.idr2())
+                                    result_i.append(self.idr2(etat = False))
                                 else:
-                                    result_i.append(self.idr1())
+                                    result_i.append(self.idr1(etat = False))
                             else: 
-                                result_i.append(self.idr3())
+                                result_i.append(self.idr3(etat = False))
                         if bool(random.getrandbits(1)): symbole = '+'
                         else: symbole = '-'
                         if bool(random.getrandbits(1)): symbole_2 = '+'
                         else: symbole_2 = '-'
-                        calc = f'{result_i[0]}*{result_i[1]}{symbole}{result_i[2]}*{result_i[3]}{symbole_2}{result_i[4]}*{result_i[5]}'
+                        calc = f'({result_i[0]})*({result_i[1]}){symbole}({result_i[2]})*({result_i[3]}){symbole_2}({result_i[4]})*({result_i[5]})'
                         print(f' > {calc}')
                     except: print(f'{cr}[!] erreur 6 !{cw}')
                 
@@ -149,11 +140,11 @@ class OBP():
                         for i in range(18):
                             if bool(random.getrandbits(1)):
                                 if bool(random.getrandbits(1)):
-                                    result_i.append(self.idr2())
+                                    result_i.append(self.idr2(etat = False))
                                 else:
-                                    result_i.append(self.idr1())
+                                    result_i.append(self.idr1(etat = False))
                             else: 
-                                result_i.append(self.idr3())
+                                result_i.append(self.idr3(etat = False))
                         if bool(random.getrandbits(1)): symbole = '+'
                         else: symbole = '-'
                         if bool(random.getrandbits(1)): symbole_2 = '+'
@@ -170,7 +161,7 @@ class OBP():
                         else: symbole_7 = '-'
                         if bool(random.getrandbits(1)): symbole_8 = '+'
                         else: symbole_8 = '-'
-                        calc = f'{result_i[0]}*{result_i[1]}{symbole}{result_i[2]}*{result_i[3]}{symbole_2}{result_i[4]}*{result_i[5]}{symbole_3}{result_i[6]}*{result_i[7]}{symbole_4}{result_i[8]}*{result_i[9]}{symbole_5}{result_i[10]}*{result_i[11]}{symbole_6}{result_i[12]}*{result_i[13]}{symbole_7}{result_i[14]}*{result_i[15]}{symbole_8}{result_i[16]}*{result_i[17]}'
+                        calc = f'({result_i[0]})*({result_i[1]}){symbole}({result_i[2]})*({result_i[3]}){symbole_2}({result_i[4]})*({result_i[5]}){symbole_3}({result_i[6]})*({result_i[7]}){symbole_4}({result_i[8]})*({result_i[9]}){symbole_5}({result_i[10]})*({result_i[11]}){symbole_6}({result_i[12]})*({result_i[13]}){symbole_7}({result_i[14]})*({result_i[15]}){symbole_8}({result_i[16]})*({result_i[17]})'
                         print(f' > {calc}')
                     except: print(f'{cr}[!] erreur 18 !{cw}')
                 else: 
@@ -180,44 +171,65 @@ class OBP():
         else: 
             print(' - IR1 = (a+b)² = a² + 2ab + b²')
             print(' - IR2 = (a-b)² = a² - 2ab + b² ')
-            print(' - IR3 = a² - b² = (a+b)(a-b)  /  (a+b)(a-b) = a² - b²')
+            print(' - IR3 = a² - b² = (a+b)(a-b)')
             idr = input(f'entrez une identité remarquable (1/2/3)> ')
             if idr == '1':
-                print(self.idr1())
+                print(self.idr1(etat = True))
             elif idr == '2':
-                print(self.idr2())
+                print(self.idr2(etat = True))
             elif idr == '3':
-                print(self.idr3())
+                print(self.idr3(etat = True))
             else:
                 print(f'{cr}[!] erreur (choisissez une option valide) !{cw}')
                 
     # [+] remarquable identity main code
-    def idr1(self):
+    def idr1(self, etat):
         # (a+b)² = a² + 2ab + b²
-        if bool(random.getrandbits(1)): x = 'x'
-        else: x = ''
-        if bool(random.getrandbits(1)): s = '-'
-        else: s = ''
-        return f'({s}{random.randint(1, 9)}{x}+{random.randint(1, 9)})²'
+        if etat:
+            if bool(random.getrandbits(1)): s = '-'
+            else: s = ''
+            a = random.randint(1, 9)
+            b = random.randint(1, 9)
+            return f' > ({s}{a}x+{b})²  =>  ({s}{a}x)² + {s}{2*a*b}x + {b}²'
+        else:
+            if bool(random.getrandbits(1)): s = '-'
+            else: s = ''
+            a = random.randint(1, 9)
+            b = random.randint(1, 9)
+            return f'({s}{a}x+{b})²'
 
-    def idr2(self):
+    def idr2(self, etat):
         # (a-b)² = a² - 2ab + b² 
-        if bool(random.getrandbits(1)): x = 'x'
-        else: x = ''
-        if bool(random.getrandbits(1)): s = '-'
-        else: s = ''
-        return f'({s}{random.randint(1, 9)}{x}-{random.randint(1, 9)})²'
+        if etat:
+            if bool(random.getrandbits(1)): s = '-'
+            else: s = ''
+            a = random.randint(1, 9)
+            b = random.randint(1, 9)
+            return f' > ({s}{a}x-{b})²  =>  ({s}{a}x)² - {s}{2*a*b}x + {b}²'
+        else:
+            if bool(random.getrandbits(1)): s = '-'
+            else: s = ''
+            a = random.randint(1, 9)
+            b = random.randint(1, 9)
+            return f'({s}{a}x-{b})²'
 
-    def idr3(self):
+    def idr3(self, etat):
         # a² - b² = (a+b)(a-b)
         # (a+b)(a-b) = a² - b²
-        if bool(random.getrandbits(1)): x = 'x'
-        else: x = ''
-        if bool(random.getrandbits(1)): return f'{random.randint(1, 9)}{x}²-{random.randint(1, 9)}²'
-        else: 
-            a = f'{random.randint(1, 9)}'
-            b = f'{random.randint(1, 9)}'
-            return f'({a}+{b})*({a}-{b})'
+        if etat:
+            a = random.randint(1, 9)
+            b = random.randint(1, 9)
+            if bool(random.getrandbits(1)): 
+                return f' > ({a}x)²-{b}²  =>  ({a}x+{b})({a}x-{b})'
+            else: 
+                return f' > ({a}x+{b})*({a}x-{b})  =>  ({a}x)²-{b}²'
+        else:
+            a = random.randint(1, 9)*random.randint(1, 9)
+            b = random.randint(1, 9)
+            if bool(random.getrandbits(1)): 
+                return f'({a}x)²-{b}²'
+            else: 
+                return f'({a}x+{b})*({a}x-{b})'
         
     # [-] remarquable identity main code
     
