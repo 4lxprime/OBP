@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Python</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png">
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            ::selection {
+                color: rgb(0, 47, 255);
+                background: rgba(0, 47, 255, 0.3);
+            }
+
+            html {
+                text-align: center;
+            }
+
+            body {
+                min-height: 100vh;
+                background: #ffffff;
+            }
+
+            .top {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            }
+
+            .topa {
+                color: black;
+                text-decoration: rgb(0, 47, 255);
+                font-weight: 400;
+                padding-right: 15px;
+                margin-right: 10px;
+                padding-left: 15px;
+                margin-left: 10px;
+                display: inline;
+                z-index: 1000;
+                /* border-left: 1px solid rgba(0, 0, 0, 0.2);
+                border-right: 1px solid rgba(0, 0, 0, 0.2); */
+            }
+
+            .code {
+                display: block;
+                padding: 10px;
+                margin-left: 100px;
+                margin-right: 100px;
+                width: auto;
+                text-align: left;
+                background: rgba(44, 44, 44, 0.877);
+                color: white;
+            }
+
+            .code::selection {
+                color: aqua;
+                background: rgba(0, 0, 0, 0.2);
+            }
+
+            .blue {
+                color: rgb(0, 47, 255);
+                display : inline; 
+            }
+
+            .blue::selection {
+                color: rgb(251, 255, 0);
+                background: rgba(0, 47, 255, 0.3);
+            }
+
+            h1 {
+                padding: 20px;
+                margin: 20px;
+                font-size: 80px;
+            }
+            h2 {
+                padding: 10px;
+                margin: 20px;
+                font-size: 50px;
+            }
+            h3 {
+                padding: 5px;
+                margin: 10px;
+                font-size: 30px;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            img {
+                width: 550px;
+                height: 300px;
+                padding: 10px;
+                margin: 5px;
+            }
+
+            .pt {
+                padding: 20px;
+                margin: 15px;
+            }
+            .point {
+                color: black;
+                text-decoration: none;
+            }
+            .def p {
+                text-align: left;
+            }
+            .defa {
+                text-decoration: none;
+                color: rgb(0, 47, 255);
+            }
+            .defa::selection {
+                color: yellow;
+                background: rgba(0, 47, 255, 0.3);
+            }
+            .logo {
+                width: 20px;
+                height: 20px;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top">
+            <a href="https://www.python.org/downloads/" target="_blank"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"></a>
+            <a class="topa" href="#idpre">presentation</a>
+            <a class="topa" href="#incid">inconvenient</a>
+            <a class="topa" href="#prerequisid">pre-requis</a>
+            <a class="topa" href="#defid">definitions</a>
+        </div>
+        <div class="title">
+            <h1>Presentation de <p class="blue">python</p></h1>
+        </div>
+        <div class="presentation pt" id="idpre">
+            <h2>Presentation globale :</h2>
+            <p>Python est un langage que je présenterais en trois points :</p>
+            <ul>
+                <li><a class="point" href="#pt1">1. simple</a></li>
+                <li><a class="point" href="#pt2">2. flexible</a></li>
+                <li><a class="point" href="#">3. compatible</a></li>
+            </ul>
+        </div>
+        <div class="pt1 pt" id="pt1id">
+            <h3>Sa simplicité :</h3>
+            <p>python est le <a href="#defid" class="defa" >langage interprété</a> le plus utilisé au monde.<br>sa syntaxe est extrêmement simple par rapport à des langages complexes comme le C ou le C++ et il inclut intuitivement les mathématiques.<br>Voici un exemple de code python qui permet d'afficher un <a href="#defid" class="defa">hello world</a> : </p><br>
+            <div class="code">
+                <p>python : </p><p class="code">print("hello world")</p><br>
+                <p>C : </p><p class="code">#include &lt;stdio.h&gt;<br>
+                    int main() {<br>
+                    printf("Hello, World!");<br>
+                    return 0;<br>
+                    }</p></div>
+            </div>
+        <div class="pt2 pt" id="pt2id">
+            <h3>Sa flexibilité :</h3>
+            <p>Python est un langage extrêmement flexible du fait de son fonctionnement avec des <a href="#defid" class="defa">modules</a>.<br>ces modules sont développés pour la grande majorité par sa très grande communauté.<br>Ils font qu'avec python on peut presque tout faire comme par exemple : des programmes de calculs avancés, des sites web, de la reconnaissance vocale, des assistants vocaux, des intelligences artificielles, des bots discord, de l'automatisme, des <a href="#defid" class="defa">malwares</a> ...</p><br>
+            <img src="https://cdn.futura-sciences.com/buildsv6/images/wide1920/d/1/e/d1e47c37fa_119289_ia-intelligence-artificielle.jpg">
+        </div>
+        <div class="pt3 pt" id="pt3id">
+            <h3>Sa compatibilite :</h3>
+            <p>Python est un langage qui est très compatible grace au fait qu'on le retrouve sur des systèmes d'exploitation "normaux" comme <a href="#defid" class="defa">linux</a>, <a href="#defid" class="defa">windows</a>, <a href="#defid" class="defa">macos</a>, <a href="#defid" class="defa">android</a> mais aussi sur des machines un peu moins communes comme des <a href="#defid" class="defa">systèmes embarqués</a> ou meme des <a href="#defid" class="defa">machines quantiques</a> (c'est d'ailleurs le langage priorisé pour les <a href="#defid" class="defa">machines quantiques</a>).</p>
+        </div>
+        <div class="avan pt" id="avanid">
+            <h2>Les inconvenients :</h2>
+            <p>Le principal inconvenient de python est sa lenteur, par exemple sur un code équivalent en C et en python, le C va s'exécuter 45 fois plus vite que le python, ce qui est un énorme désavantage.<br>Mais ce problème peut se régler avec une compilation (avec le programme nuitka) qui va transformer le code en C puis va le compiler pour obtenir un exécutable (.exe), ce qui est l'équivalent d'un code en C compilé.</p>
+        </div>
+        <div class="prerequis pt" id="prerequisid">
+            <h2>Pre-requis :</h2>
+            <p>Pour commencer à développer en python il faut :</p>
+            <h3>. Un IDE</h3>
+            <p>Nous allons utiliser <a href="https://code.visualstudio.com/" target="_blank" class="defa">vscode</a> qui est selon moi l'<a class="defa" href="#defid">IDE</a> le plus pratique, simple et léger pour débuter sur a peu pres n'importe quel langage de programmation</p>
+            <img src="https://f.hellowork.com/bdmtools/2022/03/visual-studio-code.jpg">
+            <h3>. Un interpréteur</h3>
+            <p>Nous allons devoir télécharger l'interpréteur python depuis leur site (<a href="https://www.python.org/downloads/" target="_blank" class="defa">python.org</a>)</p>
+            <img src="https://i0.wp.com/www.sigterritoires.fr/wp-content/uploads/2015/06/py2.png">
+        </div>
+        <div class="obp pt">
+            <h2>Mon program OBP :</h2>
+            <h3>Nous pouvons le retrouver sur mon github <a href="https://github.com/4lxprime/OBP" target="_blank" class="defa">ici</a> ou en version web <a href="oral-OBP.html" target="_blank" class="defa">ici</a>.</h3>
+            <p>OBP (Oral Brevet Project) est un programme qui permet de generer des identités remarquables (avec des nombres aleatoires) mais aussi de creer des calculs plus ou moins complexes (aleatoirement grace au module random).</p>
+        </div>
+        <div class="def pt" id="defid">
+            <h2>definitions :</h2> 
+            <p>- langage interprété = Langage de programmation dont le code source est interprété et non pas compilé. C'est-à-dire que chaque ligne est analysée et exécutée à la volée par un interpréteur.</p>
+            <p>- hello world = « Hello world » sont les mots traditionnellement écrits par un programme informatique simple dont le but est de faire la démonstration rapide de son exécution sans erreur.</p>
+            <p>- modules = fichier (dans notre cas en python) qui permet d'importer du code dans son programme sans avoir a le copier coller</p>
+            <p>- malware = virus informatique</p>
+            <p>- windows = Système d'exploitation développé par Microsoft</p>
+            <p>- linux = Système d'exploitation développé par <a href="https://fr.wikipedia.org/wiki/Linus_Torvalds" target="_blank" class="defa">Linus Torvalds</a> qui sert principalement pour les serveurs et la cybersecurité, son <a href="#defid" class="defa">kernel</a> est <a href="#defid" class="defa">open source</a></p>
+            <p>- macos = Système d'exploitation développé par apple pour ses ordinateurs mac</p>
+            <p>- android = Système d'exploitation développé par google, il utilise le <a href="#defid" class="defa">kernel</a> linux et il est utilisé sur la plupart des telephones</p>
+            <p>- système embarqué = système électronique et informatique autonome dédié à une tâche précise (comme par exemple dans les voitures modernes comme les tesla)</p>
+            <p>- kernel linux = noyau du systeme d'exploitation linux.</p>
+            <p>- ordinateur quantique = ordinateur qui effectue des calculs en utilisant directement les lois de la physique quantique</p>
+            <p>- open source = qui ne cache pas son code et l'expose pour permettre a sa communaute de l'utiliser ou de l'ameliorer.</p>
+            <p>- IDE = Un environnement de développement intégré</p>
+        </div>
+    </body>
+</html>
