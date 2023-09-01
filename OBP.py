@@ -1,13 +1,7 @@
 # [+] imports
 import random
-from colorama import Fore
 
 # [+] var
-cr = Fore.RED
-cb = Fore.BLUE
-cw = Fore.WHITE
-cy = Fore.YELLOW
-cg = Fore.GREEN
 logo = """
     ,o888888o.     8 888888888o   8 888888888o
  . 8888     `88.   8 8888    `88. 8 8888    `88.
@@ -28,12 +22,12 @@ class OBP():
         self.main()
     
     def main(self):
-        cmd = input (f"{cw}automatique ou manuel (a/m)> ")
+        cmd = input (f"automatique ou manuel (a/m)> ")
         if cmd == 'a':
-            gen_lvl = input(f"{cw}nombre d'identités remarquables dans une meme operation (1->6)> ")
+            gen_lvl = input(f"nombre d'identités remarquables dans une meme operation (1->6)> ")
             try: int(gen_lvl)
             except: 
-                print(f'{cr}[!] erreur (entrez un nombre) !{cw}')
+                print(f'[!] erreur (entrez un nombre) !')
                 self.main()
             try: 
                 if int(gen_lvl) == 1:
@@ -41,11 +35,14 @@ class OBP():
                         if bool(random.getrandbits(1)):
                             if bool(random.getrandbits(1)):
                                 print(f' > {self.idr2(etat = False)}')
+                                
                             else:
                                 print(f' > {self.idr1(etat = False)}')
+                                
                         else: 
                             print(f' > {self.idr3(etat = False)}')
-                    except: print(f'{cr}[!] erreur 1 !{cw}')
+                            
+                    except: print(f'[!] erreur 1 !')
                     
                 elif int(gen_lvl) == 2:
                     try:
@@ -60,7 +57,8 @@ class OBP():
                                 result_i.append(self.idr1(etat = False))
                         calc = f'({result_i[0]})*({result_i[1]})'
                         print(f' > {calc}')
-                    except: print(f'{cr}[!] erreur 2 !{cw}')
+                        
+                    except: print(f'[!] erreur 2 !')
                     
                 elif int(gen_lvl) == 3:
                     try:
@@ -77,7 +75,8 @@ class OBP():
                         else: symbole = '-'
                         calc = f'({result_i[0]})*({result_i[1]}){symbole}({result_i[2]})'
                         print(f' > {calc}')
-                    except: print(f'{cr}[!] erreur 3 !{cw}')
+                        
+                    except: print(f'[!] erreur 3 !')
                 
                 elif int(gen_lvl) == 4:
                     try: 
@@ -94,7 +93,8 @@ class OBP():
                         else: symbole = '-'
                         calc = f'({result_i[0]})*({result_i[1]}){symbole}({result_i[2]})*({result_i[3]})'
                         print(f' > {calc}')
-                    except: print(f'{cr}[!] erreur 4 !{cw}')
+                        
+                    except: print(f'[!] erreur 4 !')
                 
                 elif int(gen_lvl) == 5:
                     try:
@@ -113,7 +113,8 @@ class OBP():
                         else: symbole_2 = '-'
                         calc = f'({result_i[0]})*({result_i[1]}){symbole}({result_i[2]})*({result_i[3]}){symbole_2}({result_i[4]})'
                         print(f' > {calc}')
-                    except: print(f'{cr}[!] erreur 5 !{cw}')
+                        
+                    except: print(f'[!] erreur 5 !')
                 
                 elif int(gen_lvl) == 6:
                     try:
@@ -132,7 +133,8 @@ class OBP():
                         else: symbole_2 = '-'
                         calc = f'({result_i[0]})*({result_i[1]}){symbole}({result_i[2]})*({result_i[3]}){symbole_2}({result_i[4]})*({result_i[5]})'
                         print(f' > {calc}')
-                    except: print(f'{cr}[!] erreur 6 !{cw}')
+                        
+                    except: print(f'[!] erreur 6 !')
                 
                 elif int(gen_lvl) == 18:
                     try:
@@ -161,13 +163,18 @@ class OBP():
                         else: symbole_7 = '-'
                         if bool(random.getrandbits(1)): symbole_8 = '+'
                         else: symbole_8 = '-'
-                        calc = f'({result_i[0]})*({result_i[1]}){symbole}({result_i[2]})*({result_i[3]}){symbole_2}({result_i[4]})*({result_i[5]}){symbole_3}({result_i[6]})*({result_i[7]}){symbole_4}({result_i[8]})*({result_i[9]}){symbole_5}({result_i[10]})*({result_i[11]}){symbole_6}({result_i[12]})*({result_i[13]}){symbole_7}({result_i[14]})*({result_i[15]}){symbole_8}({result_i[16]})*({result_i[17]})'
+                        calc = f'''({result_i[0]})*({result_i[1]}){symbole}({result_i[2]})*({result_i[3]})
+                        {symbole_2}({result_i[4]})*({result_i[5]}){symbole_3}({result_i[6]})*({result_i[7]})
+                        {symbole_4}({result_i[8]})*({result_i[9]}){symbole_5}({result_i[10]})*({result_i[11]})
+                        {symbole_6}({result_i[12]})*({result_i[13]}){symbole_7}({result_i[14]})*({result_i[15]})
+                        {symbole_8}({result_i[16]})*({result_i[17]})'''
                         print(f' > {calc}')
-                    except: print(f'{cr}[!] erreur 18 !{cw}')
+                        
+                    except: print(f'[!] erreur 18 !')
                 else: 
-                    print(f'{cr}[!] erreur (entrez un nombre valide) !{cw}')
+                    print(f'[!] erreur (entrez un nombre valide) !')
                     self.main()
-            except: print(f'{cr}[!] erreur global !{cw}')
+            except: print(f'[!] erreur global !')
         else: 
             print(' - IR1 = (a+b)² = a² + 2ab + b²')
             print(' - IR2 = (a-b)² = a² - 2ab + b² ')
@@ -175,12 +182,15 @@ class OBP():
             idr = input(f'entrez une identité remarquable (1/2/3)> ')
             if idr == '1':
                 print(self.idr1(etat = True))
+                
             elif idr == '2':
                 print(self.idr2(etat = True))
+                
             elif idr == '3':
                 print(self.idr3(etat = True))
+                
             else:
-                print(f'{cr}[!] erreur (choisissez une option valide) !{cw}')
+                print(f'[!] erreur (choisissez une option valide) !')
                 
     # [+] remarquable identity main code
     def idr1(self, etat):
@@ -233,7 +243,7 @@ class OBP():
         
     # [-] remarquable identity main code
     
-print(cb + logo + cw)
+print(logo)
 
 while True: 
     OBP()
